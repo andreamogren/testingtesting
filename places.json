@@ -1,0 +1,20 @@
+{
+    "places": [
+        {
+            "title" : "Flottsbro Downhill Cars",
+            "location" : "Flottsbro Friluftsområde Häggstavägen 20 141 32 Huddinge"
+        },
+        {
+            "title" : "Skansen",
+            "location" : "Djurgårdsslätten 49-51, 115 21 Stockholm"
+        },
+        {
+            "title" : "Boule & Berså",
+            "location" : "Sjökvarnsbacken 13, 131 71 Nacka"
+        },
+        {
+            "title" : "Hellasgården",
+            "location" : "Hellasgården, Ältavägen 101, 131 33 Nacka"
+        }
+    ]
+}
