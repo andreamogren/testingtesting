@@ -29,9 +29,8 @@
          directionsDisplay.setPanel(document.getElementById('panel'));
 
         $.getJSON("places.json", function(data) 
-        console.log(data){
-        var data = data;
-         });
+        {var data = data;});
+        console.log(data);
 
         var randomPlace = data.places[valueToUse]; // a random place
         randomPlace.title;
