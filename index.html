@@ -28,18 +28,20 @@
          directionsDisplay.setMap(map);
          directionsDisplay.setPanel(document.getElementById('panel'));
 
-        $.getJSON("places.json", function(data) {
-            var data = data;
-            
-            var valueToUse = places[Math.floor(Math.random())] * (data.places.length);
-            var randomPlace = data.places[valueToUse]; // a random place
-            randomPlace.title;
+        
+         $.getJSON("places.json", function(data) {
+           var data = data;
 
-            var request = {
-            origin: 'Telefonplan', 
-            destination: valueToUse,
-            travelMode: google.maps.DirectionsTravelMode.WALKING
-            };
+          var randomPlace = places.data[valueToUse]; // a random place
+          randomPlace.title;
+          var valueToUse = values[Math.floor(Math.random())] * (data.places.length);
+
+           var request = {
+             origin: 'Telefonplan', 
+             destination: valueToUse,
+             travelMode: google.maps.DirectionsTravelMode.WALKING
+           };
+      
     
             directionsService.route(request, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
