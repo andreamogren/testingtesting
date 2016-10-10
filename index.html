@@ -28,9 +28,8 @@
          directionsDisplay.setMap(map);
          directionsDisplay.setPanel(document.getElementById('panel'));
 
-        $.getJSON("places.json", function(data) 
-        {var data = data;});
-        console.log(data);
+        $.getJSON("places.json", function(data) {
+            var data = data;
 
         var randomPlace = data.places[valueToUse]; // a random place
         randomPlace.title;
@@ -47,6 +46,7 @@
              directionsDisplay.setDirections(response);
            }
          });
+        });
        </script> 
     </body> 
     </html>
