@@ -32,8 +32,8 @@
          $.getJSON("places.json", function(data) {
            var data = data;
              
-          var valueToUse = places[Math.floor(Math.random())] * (data.places.length);
-          var randomPlace = value.places[valueToUse]; // a random place
+          var valueToUse = value[Math.floor(Math.random())] * (data.places.length);
+          var randomPlace = data.places[valueToUse]; // a random place
           randomPlace.title;
 
            var request = {
