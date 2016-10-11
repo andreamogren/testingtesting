@@ -31,7 +31,8 @@
 
         
          $.get("places.json", function(response) {
-           var data = JSON.parse(response);
+           //var data = JSON.parse(response);
+             var data = jQuery.parseJSON(JSON.stringify(response));
             
           var randomNumber = Math.floor(Math.random() * (data.places.length));
           var valueToUse = data.places[randomNumber];
