@@ -10,6 +10,7 @@
        <script> src="places.json"</script>
     </head> 
     <body style="font-family: Arial; font-size: 12px;"> 
+
        <div style="width: 600px;">
        <div id="map" style="width: 280px; height: 400px; float: left;"></div> 
          <div id="panel" style="width:700px; text-align:center;"></div> 
@@ -23,22 +24,21 @@
            zoom:7,
            mapTypeId: google.maps.MapTypeId.ROADMAP
          });
-         var data = data; 
+         var data; 
         
          directionsDisplay.setMap(map);
          directionsDisplay.setPanel(document.getElementById('panel'));
 
         
-         $.getJSON("places.json", function(data) {
-           var data = data;
-             
-          var valueToUse = data[Math.floor(Math.random())] * (data.places.length);
-          var randomPlace = data.places[valueToUse]; // a random place
-          randomPlace.title;
+         $.get("places.json", function(response) {
+           var data = JSON.parse(response);
+            
+          var randomNumber = Math.floor(Math.random() * (data.places.length));
+          var valueToUse = data.places[randomNumber];
 
            var request = {
              origin: 'Telefonplan',
-             destination: valueToUse,
+             destination: valueToUse.location,
              travelMode: google.maps.DirectionsTravelMode.WALKING
            };
       
