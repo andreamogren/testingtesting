@@ -33,13 +33,11 @@
          $.getJSON("places.json", function(data) {
            var data = data;
              
-          var valueToUse = data[Math.floor(Math.random())] * (data.places.length);
-          var randomPlace = data.places[valueToUse]; // a random place
-          randomPlace.title;
+          var valueToUse = data[Math.floor(Math.random() * (data.places.length))];
 
            var request = {
              origin: 'Telefonplan',
-             destination: valueToUse,
+             destination: valueToUse.location,
              travelMode: google.maps.DirectionsTravelMode.WALKING
            };
       
