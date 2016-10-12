@@ -1,0 +1,48 @@
+[{
+         	"title":"Nature walk in Hellasgården",
+			"location":"Hellasgården",
+			"description":"Take time to do a nice walk today",
+			"category":"Nature"
+			}, 
+			{"title":"Camping at Långholmen",
+			"location":"Långholmen",
+			"description":"A nice night outdoors",
+			"category":"Nature"
+			},
+
+			{"title":"HUluahula",
+			"location":"Hornstull",
+			"description":"Dancing!",
+			"category":"city"
+			},
+
+			{"title":"Swimming",
+			"location":"Saltsjöbaden",
+			"description":"Nice swim",
+			"category":"Nature"
+			},
+
+			{"title":"Cliffjumping",
+			"location":"Nockeby",
+			"description":"Do something exiting today!",
+			"category":"dangerous"
+			}, 
+
+			{"title":"Flottsbro Downhill Cars",
+			"location":"Flottsbro Friluftsområde Häggstavägen 20 141 32 Huddinge",
+			"description":"The 100 % environmentally friendly car!",
+			"category":"Fun"
+			},
+ 
+			{"title":"Skansen",
+			"location":"Djurgårdsslätten 49-51, 115 21 Stockholm",
+			"description":"Why not visit Sweden's oldest outdoor museum?",
+			"category":"Fun"
+			},
+ 
+ 			{"title": "Boule & Berså",
+	                "location": "Sjökvarnsbacken 13, 131 71 Nacka",
+			"description": "Beat your friends in a game of boule!",
+			"category":"Fun"
+			}
+			]
