@@ -104,15 +104,14 @@
 					$.get("adventure_data.json", function(response) {
 
 						var json             = jQuery.parseJSON(JSON.stringify(response));
-
-						var filteredJson = {};
+							var filteredJson = {};
+							var obj = json[i];
 						
 						for(var i = 0; i < json.length; i++) {
-							var obj = json[i];
 							if (obj.category == activeCategory) {
-							filteredJson.push(obj)}
+							}
 						}; 
-							console.log(json);
+							console.log(filteredJson.push(obj));
 							
 
 						var randomJsonObject = json[Math.floor(Math.random() * json.length)];
