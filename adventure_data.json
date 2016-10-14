@@ -1,0 +1,73 @@
+[{
+         	"title":"Outdoor adventure in Hellasgården",
+			"location":"Hellasgården",
+			"description":"Spend some time in the beautiful Swedish nature. At Hellasgården you can go for a walk, rent a canoe or visit the sauna!",
+			"category":"Nature"
+			}, 
+
+			{"title":"Climbing at Klätterverket in Telefonplan",
+			"location":"Tellusgången 22 126 37 Hägersten",
+			"description":"Do you want to reach new heights? Challenge yourself to go climb at Klätterverket today!",
+			"category":"Fun"
+			}, 
+
+			{"title":"Flottsbro Downhill Cars",
+			"location":"Häggstavägen 20 141 32 Huddinge",
+			"description":"Who says downhill cars is for kids? Treat. yo. self!",
+			"category":"Fun"
+			}, 
+
+			{"title":"SMC Gokart",
+			"location":"Palermogatan 40 115 56 Gärdet",
+			"description":"Live your secret dream of being a race car driver for the day, drive a Gokart!",
+			"category":"Fun"
+			},
+
+			{"title":"Bodyflight",
+			"location":"Bryggerivägen 10 168 67 Bromma",
+			"description":"Have you ever been jealous of birds? Try bodyflight! Show those suckers who's the levitating master!",
+			"category":"Far away"
+			},
+
+			{"title":"Eriksdalsbadet waterpark",
+			"location":"Hammarby Slussväg 20 118 60 Södermalm",
+			"description":"Go explore Eriksdalsbadet's waterpark! Here you can swim outside, even in the winter...",
+			"category":"Kids"
+			}, 
+
+			{"title":"Questrooms Sankt Eriksgatan",
+			"location":"Sankt Eriksgatan 33A",
+			"description":"Become Sherlock Holmes (or a detective of your choice) and try to solve a mystery in real life.",
+			"category":"City"
+			},
+
+			{"title":"Frisbee golf",
+			"location":"Akallalänken 10 164 79 Kista",
+			"description":"Can't decide if you want to play frisbee or golf? Why not do both at the same time?",
+			"category":"Far away"
+			},
+
+			{"title":"Vespa time!",
+			"location":"Wallingatan 30 111 24 Stockholm",
+			"description":"Screw walking! Why not try to explore Stockholm in a different way? Rent a scooter at Vespa Stockholm!",
+			"category":"City"
+			},
+
+			{"title":"Go skiing!",
+			"location":"Hammarby Fabriksväg 111 120 33 Hammarby Sjöstad",
+			"description":"Embrace the cold snow and the darkness that covers Sweden for most of the year. There is nowhere to hide anyway. Go skiing at Hammarbybacken!",
+			"category":"Nature"
+			},
+			{"title":"Go for a walk on Djurgården",
+			"location":"Djurgården",
+			"description":"Djurgården is beautiful all year around, and there is lots to explore. Find remnants of old times and go for a nice cup of tea in one of the island's many restaurants when you need to rest your feet.",
+			"category":"Nature"
+			}]
+
+
+
+
+
+
+
+

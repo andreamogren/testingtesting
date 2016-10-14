@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="../compass.png" />
+		<link rel="stylesheet" type="text/css" href="categorystyle.css">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<script type="text/javascript" 
+               src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEdu23sATw9F3n0jzTq37poQMKVLrxTYc"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<title>It's time for an adventure!</title>
+	</head>
+		<body>
+			<div id="header">
+				<a href="../index.html"> <img id="logo" src="../adventuring.png"> </a>
+					<div id="nav">
+					    <a class="navlist" href="nature.html">NATURE</a>
+						<a class="navlist" href="city.html">CITY</a>
+						<a class="navlist" href="far-away.html">FAR AWAY</a>
+						<a class="navlist" href="free.html">FREE</a>
+					    <a class="navlist" href="kids.html">KIDS</a>
+						<a class="navlist" href="fun.html">FUN</a>
+					</div>
+			</div>
+
+	<h1> Search here to bring up a random nature themed adventure!</h1>		
+	<div id="input_div">
+		<form name="myform" action="" method="GET">Enter your location in the box<br>
+     			<input id="input_location" type="text" name="inputbox" value=""> <br>
+     				<input id="button_submit" type="button" name="button" Value="Find my adventure">
+      		 </form>
+		
+		<div id="form-input"></div>
+	</div>
+		
+	<div id="title_div">
+		<p id="title"></p>
+	</div>
+		
+	<div id="container">
+		<div id="column1">
+			<p id="description"></p>
+	</div>
+
+	<div id="column2">
+			<div id="panel">
+			</div>
+		</div>
+
+		<div id="column3">
+			<div id="map">
+			</div>
+		</div>
+	</div>
+
+			<script type="text/javascript"> 
+					
+					document.getElementById('column1').style.visibility = "hidden";
+					document.getElementById('column2').style.visibility = "hidden";
+					document.getElementById('column3').style.visibility = "hidden";
+					document.getElementById('title').style.visibility   = "hidden";
+
+					
+					$(document).ready(function() {
+						$('#button_submit').click(function(){
+							
+							document.getElementById('column1').style.visibility = "visible";
+							document.getElementById('column2').style.visibility = "visible";
+							document.getElementById('column3').style.visibility = "visible";
+							document.getElementById('title').style.visibility   = "visible";
+							
+							var directionsService = new google.maps.DirectionsService();
+							var directionsDisplay = new google.maps.DirectionsRenderer();
+
+							var map = new google.maps.Map(
+							     document.getElementById('map'), {
+								zoom	  : 7,
+								mapTypeId : google.maps.MapTypeId.ROADMAP
+							     }
+							);
+
+							directionsDisplay.setMap(map);
+							directionsDisplay.setPanel(document.getElementById('panel'));
+
+							$.get("nature_data.json", function(response) {
+
+								var json             = jQuery.parseJSON(JSON.stringify(response));
+								var randomJsonObject = json[Math.floor(Math.random() * json.length)];
+
+								document.getElementById('title'      ).innerHTML = randomJsonObject.title;
+								document.getElementById('description').innerHTML = randomJsonObject.description;
+
+									   var request = {
+										origin		: $('#input_location').val(), 
+										destination	: randomJsonObject.location,
+										travelMode	: google.maps.DirectionsTravelMode.TRANSIT
+									   }
+
+									   directionsService.route(request, function(response, status) {
+										if (status == google.maps.DirectionsStatus.OK) {
+											directionsDisplay.setDirections(response);
+										}
+									   });
+							 });
+							
+							$('#feature').hide();
+						});
+					});
+				</script>
+		<br>
+
+		<div class="description_div">
+			<h1>Embrace nature <h1>
+				<p><i>Nature's surrondings are always available for you to explore (and usually free!). Why not explore what you're maybe taking for granted? Here are the different nature themed adventures that adventuring.se will suggest for you:</i></p>
+
+
+					<ul>
+						<li><a href="http://hellasgarden.se/en/">Hellasgården </a> - Take the chance to go for a swim or a stroll in the beautiful Erstavik forest. Since you're feeling adventurous, why not try bathing in an ice-hole or beach volleyball? </li>
+						<br>
+						<li><a href="http://www.visitstockholm.com/en/See--do/Attractions/djurgarden/"> Djurgården </a> - Stockholm is a strange place. Close to the central city, there is an entire island which is basically one big forest! Don't miss this beautiful green oasis, which once belonged to the king. 
+						</li>
+						<br>
+						<li><a href="https://www.skistar.com/en/Hammarbybacken/"> Hammarbybacken </a> - You don't have to go North to ski, you can ski at Hammarbybacken in Stockholm! They are real pros who make their own snow, so that your skiing needs are satisfied all winter.</li>
+					</ul>
+	</div>
+		</body>
+</html>
