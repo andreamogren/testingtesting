@@ -107,13 +107,13 @@
 
 						var filteredJson = {};
 						
-
 						for(var i = 0; i < json.length; i++) {
 							var obj = json[i];
-							console.log(if (obj.category == activeCategory) {
-							filteredJson.push(obj);
-							});
-						}
+							if (obj.category == activeCategory) {
+							filteredJson.push(obj)}
+						}; 
+							console.log(json);
+							
 
 						var randomJsonObject = json[Math.floor(Math.random() * json.length)];
 
